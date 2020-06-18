@@ -67,7 +67,11 @@ fn draw( ctx: &mut std::io::Stdout, state: & GameState) -> Result<()> {
 		// draw ball
 		style::SetBackgroundColor( style::Color::Grey ),
 		cursor::MoveTo(ball_x, ball_y),
-		style::Print(" ")
+		style::Print(" "),
+
+		// move cursor back onto ball, to make it invisible
+		cursor::MoveTo(ball_x, ball_y)
+
 
 	)?;
 
